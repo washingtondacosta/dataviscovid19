@@ -1,0 +1,30 @@
+*{
+  font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    padding-top: 50px;
+}
+
+section{
+    padding-top: 25px;
+    padding-bottom: 15px;
+    min-height: 100vh;
+}
+
+section#home{
+    padding-top: 25px;
+    min-height: 100vh;
+}
+
+section#mundo{
+    padding-top: 25px;
+    min-height: 100vh;
+}
+
+section#rankings{
+    padding-top: 25px;
+    min-height: 100vh;
+}
+
