@@ -6,6 +6,9 @@
   <title>Avanço das vacinações ao redor do mundo contra o vírus COVID-19.</title>
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="dist/css/estilo.css">
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbarNav" data-offset="80">
 
@@ -94,63 +97,107 @@
             <div class="card-body">
               <h3 class="card-title">Avanço das vacinações contra o COVID-19</h3>
               <h6 style="margin-bottom: 30px">Total da população vacinada por cada pais (%)</h6>
-              <img src="imgs/Mundi.JPG" class="img-fluid" alt="" title="">
-              <p>
-                <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </p>
-              <div class="collapse" id="mapamundi">
-                <div class="card-text card-body">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                </div>
-              </div>
+              <svg id="my_dataviz" width="1000" height="450"></svg>
 
-            </div>
-          </div>
-        </div>
+              <script>
+
+  // The svg
+  var svg = d3.select("svg"),
+  width = +svg.attr("width"),
+  height = +svg.attr("height");
+
+  // Map and projection
+  var path = d3.geoPath();
+  var projection = d3.geoMercator();
+
+  // Data and color scale
+  var data = d3.map();
+  var colorScale = d3.scaleThreshold()
+  .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
+  .range(d3.schemeBlues[7]);
+
+  // Load external data and boot
+  d3.queue()
+  .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
+  .defer(d3.csv, "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv", function(d) { data.set(d.iso_code, +d.total_deaths); })
+  .await(ready);
+
+  function ready(error, topo) {
+
+    // Draw the map
+    svg.append("g")
+    .selectAll("path")
+    .data(topo.features)
+    .enter()
+    .append("path")
+        // draw each country
+        .attr("d", d3.geoPath()
+          .projection(projection)
+          )
+        // set the color of each country
+        .attr("fill", function (d) {
+          d.total = data.get(d.id) || 0;
+          return colorScale(d.total);
+        });
+      }
+
+    </script>
+    <p>
+      <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
+      </button>
+    </p>
+    <div class="collapse" id="mapamundi">
+      <div class="card-text card-body">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
       </div>
-    </section>
+    </div>
 
-    <section id="rankings">
-      <div class="row" style="margin-top: 5vh">
-        <div class="col-xs-12 col-md-12">
-
-          <h3>Ranking de vacinações</h3>
-          <h6>Total da população vacinada por cada pais (%)</h6>
-
-        </div>
-
-        <div class="col-xs-12 col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <img src="imgs/top25_1.JPG" class="img-fluid" alt="" title="">
-              <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mais sobre este gráfico</button>
-              <div class="collapse multi-collapse text-justify" id="multiCollapseExample1" style="margin-top: 20px">
-                <p>Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <img src="imgs/top25_2.JPG" class="img-fluid" alt="" title="">
-              <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Mais sobre este gráfico</button>
-              <div class="collapse multi-collapse text-justify" id="multiCollapseExample2" style="margin-top: 20px">
-                <p>Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
   </div>
+</div>
+</div>
+</div>
+</section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="dist/js/jquery.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
-  <script src="dist/js/main.js"></script>
+<section id="rankings">
+  <div class="row" style="margin-top: 5vh">
+    <div class="col-xs-12 col-md-12">
+
+      <h3>Ranking de vacinações</h3>
+      <h6>Total da população vacinada por cada pais (%)</h6>
+
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img src="imgs/top25_1.JPG" class="img-fluid" alt="" title="">
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mais sobre este gráfico</button>
+          <div class="collapse multi-collapse text-justify" id="multiCollapseExample1" style="margin-top: 20px">
+            <p>Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img src="imgs/top25_2.JPG" class="img-fluid" alt="" title="">
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Mais sobre este gráfico</button>
+          <div class="collapse multi-collapse text-justify" id="multiCollapseExample2" style="margin-top: 20px">
+            <p>Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="dist/js/main.js"></script>
 </body>
 </html>
