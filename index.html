@@ -97,51 +97,9 @@
             <div class="card-body">
               <h3 class="card-title">Avanço das vacinações contra o COVID-19</h3>
               <h6 style="margin-bottom: 30px">Total da população vacinada por cada pais (%)</h6>
-              <svg id="my_dataviz" width="1000" height="450"></svg>
-
-              <script>
-
-  // The svg
-  var svg = d3.select("svg"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height");
-
-  // Map and projection
-  var path = d3.geoPath();
-  var projection = d3.geoMercator();
-
-  // Data and color scale
-  var data = d3.map();
-  var colorScale = d3.scaleThreshold()
-  .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
-  .range(d3.schemeBlues[7]);
-
-  // Load external data and boot
-  d3.queue()
-  .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-  .defer(d3.csv, "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv", function(d) { data.set(d.iso_code, +d.total_deaths); })
-  .await(ready);
-
-  function ready(error, topo) {
-
-    // Draw the map
-    svg.append("g")
-    .selectAll("path")
-    .data(topo.features)
-    .enter()
-    .append("path")
-        // draw each country
-        .attr("d", d3.geoPath()
-          .projection(projection)
-          )
-        // set the color of each country
-        .attr("fill", function (d) {
-          d.total = data.get(d.id) || 0;
-          return colorScale(d.total);
-        });
-      }
-
-    </script>
+              <iframe width="100%" height="1204" frameborder="0"
+  src="https://observablehq.com/embed/@washingtondacosta/vaccination-against-covid-19-around-the-world/3?cells=viewof+choose%2Cviewof+dateIndex%2Cmap1%2Cmap2"></iframe>
+              
     <p>
       <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
       </button>
