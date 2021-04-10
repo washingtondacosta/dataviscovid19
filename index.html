@@ -39,9 +39,7 @@
 
   <div class="container">
     <section id="home">
-      <h2 class="card-title text-center" style="margin-top: 8vh">Análises e visualizações sobre o avanço das vacinações ao redor do mundo
-        contra o vírus COVID-19.
-      </h2>
+      <h2 class="card-title text-center" style="margin-top: 8vh">Análises e visualizações sobre o avanço das vacinações contra o vírus COVID-19 no mundo. </h2>
       <hr style="border: 1px solid black">
 
       <div class="card">
@@ -68,22 +66,28 @@
         <div class="col-xs-12 col-md-12">
           <div class="card">
             <div class="card-body">
-              <p class="card-text text-justify" style="margin-top: 2vh">Para elaboração do projeto serão utilizados dados coletados diariamente do
-                repositório Our World in Data e disponibilizados no dataset Kaggle: COVID-19
-                World Vaccination Progress. A escolha de tais dados adveio do fato de
+              <p class="card-text text-justify" style="margin-top: 2vh"> A COVID-19 é uma patologia que
+                pode apresentar sintomas variados em diferentes pacientes, desde quadros assintomáticos a 
+                quadros mais graves. Com o crescente número de casos em todo o mundo, tal doença causou 
+                preocupação aos orgãos de saúde, sendo necessário adotar medidas de prevenção,com intuito 
+                de evitar a rápida disseminação. Há mais de um ano e com milhares de casos nos países, 
+                começou um estudo árduo em pesquisa e desenvolvimento de vacinas que fossem adequadas para tal patologia.
+              </p>
+              
+              <p class="card-text text-justify" style="margin-top: 2vh"> Diante disso, surge a preoucupação sobre 
+                a situação atual das vacinações para COVID-19 em todos os países, por isso, tal projeto foi pensado 
+                visando possibilitar melhor compreensão sobre o andamento das vacinações em todo o mundo.
+              </p>
+              
+              <p class="card-text text-justify" style="margin-top: 2vh"> Para elaboração do projeto foram utilizados 
+                dados coletados diariamente do repositório <i> Our World in Data</i> e disponibilizados no 
+                <i>dataset Kaggle: COVID-19 World Vaccination Progress</i>. A escolha de tais dados adveio do fato de
                 apresentarem a possibilidade da criação de algumas visões que tratam sobre
                 o avanço das vacinações contra o COVID-19, além de propiciar algumas
                 análises a respeito do assunto a nível global.
-                As visualizações criadas exibirão informações por país em mapas
-                geográficos e outros tipos de gráficos auxiliares que trarão dados para
-                análise, a exemplo de gráficos: barras, bolhas, scatterplot, linhas e etc,
-                contendo dados sobre o número total de vacinações, os tipos de vacina e as
-                datas de efetivação das vacinas.
               </p>
             </div>
-            <div class="text-center">
-              <h5>Por Jussara Teixeira de Araújo Gonçalves e Washington da Costa Silva</h5>
-            </div>
+            
             
           </div>
         </div>
@@ -97,8 +101,8 @@
             <div class="card-body">
               <h3 class="card-title">Avanço das vacinações contra o COVID-19</h3>
               <h6 style="margin-bottom: 30px">Total da população vacinada por cada pais (%)</h6>
-              <iframe width="100%" height="1916" frameborder="0"
-  src="https://observablehq.com/embed/@washingtondacosta/vaccination-against-covid-19-around-the-world/3?cells=viewof+choose%2Cviewof+dateIndex%2Cmap1%2Cmap2%2Cviewof+linechart%2Cviewof+heatmap"></iframe>
+              <iframe width="100%" height="1236" frameborder="0"
+  src="https://observablehq.com/embed/@washingtondacosta/vaccination-against-covid-19-around-the-world/3?cells=viewof+choose%2Cviewof+dateIndex%2Cmap1%2Cmap2"></iframe>
               
     <p>
       <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
@@ -114,6 +118,44 @@
 </div>
 </div>
 </div>
+</section>
+
+<section id="rankings">
+  <div class="row" style="margin-top: 5vh">
+    <div class="col-xs-12 col-md-12">
+
+      <h3>Ranking de vacinações</h3>
+      <h6>Total da população vacinada por cada pais (%)</h6>
+
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img src="imgs/top25_1.JPG" class="img-fluid" alt="" title="">
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mais sobre este gráfico</button>
+          <div class="collapse multi-collapse text-justify" id="multiCollapseExample1" style="margin-top: 20px">
+            <p>Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img src="imgs/top25_2.JPG" class="img-fluid" alt="" title="">
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Mais sobre este gráfico</button>
+          <div class="collapse multi-collapse text-justify" id="multiCollapseExample2" style="margin-top: 20px">
+            <p>Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+        <h5>Por Jussara Teixeira de Araújo Gonçalves e Washington da Costa Silva</h5>
+     </div>
+  </div>
 </section>
 </div>
 
