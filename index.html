@@ -109,50 +109,36 @@
                 o total de vacinações, as novas vacinações, total de casos e o total de mortes, 
                 sendo possível escolher a data para a informação desejada.
               </p>
-              <h6  style="margin-bottom: 30px">Total da população vacinada por cada pais (%)</h6>
               <div style="margin-bottom: 30px"class="text-center" id="observablehq-viewof-choose-bb1592c0"></div>
               <div style="margin-bottom: 30px"class="text-center" id="observablehq-viewof-dateIndex-bb1592c0"></div>
-              <div class="text-center"><h4>World Choropleth</h4></div>
+              <div class="text-center"><h4>World Choropleth</h4><small>(Passe o mouse em cima do país para detalhes)</small></div>
               <div style="margin-left: 50px" id="observablehq-map1-bb1592c0"></div>
-              <div class="text-center">
-                <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </div>
-              <div class="collapse" id="mapamundi">
-                <div class="card-text card-body">
-                  <p><span style="font-weight: bold;">Choropleth:</span> Permite ver o total de vacinações diárias dos países, sendo possível também, selecionar no mapa as informações. </p>
+
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"><span style="font-weight: bold;">Choropleth:</span> Permite visualizar no mapa, o total de vacinações dos países, entre outras informações, colorindo cada país com a intensidade dos valores, conforme a escala ao lado, onde valores menores recebem cores mais suaves, enquanto que valores maiores recebem tons mais escuros de azul.</p>
                 </div>
               </div>
             </section>
 
             <section id="Scattergeo">
-              <div class="text-center" style="margin-top: 50px"><h4>World Scattergeo</h4></div>
+              <div class="text-center" style="margin-top: 50px"><h4>World Scattergeo</h4><small>(Passe o mouse em cima do país para detalhes)</small></div>
               <div style="margin-left: 50px" id="observablehq-map2-bb1592c0"></div>
 
-              <div class="text-center">
-                <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi2" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </div>
-
-
-              <div class="collapse" id="mapamundi2">
-                <div class="card-text card-body">
-                  <p><span style="font-weight: bold;">Scattergeo:</span> Nesse tipo de visualização, as informações são representadas por círculos, apresentando o total de vacinações por meses de cada País.</p>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"><span style="font-weight: bold;">Scattergeo:</span> Nesse tipo de visualização, as informações são representadas por círculos, de acordo com o valor atribuído a cada variável selecionada, sendo assim os círculos aumentam ou diminuem de acordo com a informação de cada país. </p>
                 </div>
               </div>
             </section>
             
             <section id="Line_chart">
-              <div class="text-center" style="margin-top: 50px"><h4>World Linechart</h4></div>
+              <div class="text-center" style="margin-top: 50px"><h4>World Linechart</h4>(Passe o mouse sobre a linha para detalhes)</div>
               <div style="margin-left: 50px" id="observablehq-viewof-linechart-bb1592c0"></div>
 
-              <div class="text-center">
-                <button class="btn btn-dark" data-toggle="collapse" href="#linechart" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </div>
-              <div class="collapse" id="linechart">
-                <div class="card-text card-body">
-                  <p><span style="font-weight: bold;">Line chart:</span> Evolução do total de vacinações nos países em cada mês</p>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"><span style="font-weight: bold;">Line chart:</span> Nesse gráfico é possível visualizar a evolução do total de cada índice selecionado, sendo um somatório apresentado do acumulo de todos os países e relacionado ao respectivo mês.</p>
                 </div>
               </div>
             </section>
@@ -160,15 +146,10 @@
             <section id="Heatmap">
               <div class="text-center" style="margin-top: 50px"><h4>World Heatmap</h4></div>
               <div style="margin-left: 50px" id="observablehq-viewof-heatmap-bb1592c0"></div>
-              <div class="text-center">
-                <button class="btn btn-dark" data-toggle="collapse" href="#heatmap" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </div>
 
-
-              <div class="collapse" id="heatmap">
-                <div class="card-text card-body">
-                  <p><span style="font-weight: bold;">Heatmap:</span> Possibilita a visualização do total de vacinações em dias específicos de cada mês. </p>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"><span style="font-weight: bold;">Heatmap:</span> Neste gráfico é possível visualizar o total de cada índice selecionado em dias específicos de cada mês, colorindo com mais intensidade os dias com maiores valores de informação, em uma escala que vai do azul, passando pelo branco, ao vermelho mais intenso.</p>
                 </div>
               </div>
             </section>
@@ -181,15 +162,10 @@
             <section id="Bubble_chart">
               <div class="text-center" style="margin-top: 50px"><h4>World BubbleChart</h4></div>
               <div id="observablehq-bubbleChart-bb1592c0"></div>
-              <div class="text-center">
-                <button class="btn btn-dark" data-toggle="collapse" href="#bubbleChart" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-                </button>
-              </div>
 
-
-              <div class="collapse" id="bubbleChart">
-                <div class="card-text card-body">
-                  <p><span style="font-weight: bold;">Bubble chart:</span> O gráfico permite ver número de doses de vacinas utilizadas nos países e a porcentagem das vacinações. Apresentando também, a quantidade em milhões aplicadas  e o percentual em todo o mundo.</p>
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text"><span style="font-weight: bold;">Bubble chart:</span> O gráfico permite ver número de doses de vacinas aplicadas em cada país e a porcentagem das vacinações. Apresentando também, a quantidade em milhões aplicadas e o percentual da população em todo o mundo.</p>
                 </div>
               </div>
             </section>
