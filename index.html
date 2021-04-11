@@ -24,7 +24,19 @@
             <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#mundo">Mundo</a>
+            <a class="nav-link" href="#Choropleth">Choropleth</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Scattergeo">Scattergeo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Line_chart">Line chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Heatmap">Heatmap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Bubble_chart">Bubble chart</a>
           </li>
         </ul>
       </div>
@@ -86,7 +98,7 @@
       </div>
     </section>
 
-    <section id="mundo">
+    <section id="Choropleth">
       <div class="row" style="margin-top: 5vh">
         <div class="col-xs-12 col-md-12">
           <div class="card">
@@ -104,112 +116,118 @@
               <div style="margin-left: 50px" id="observablehq-map1-bb1592c0"></div>
               <div class="text-center">
                 <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-              </button>
+                </button>
               </div>
-              
-              
               <div class="collapse" id="mapamundi">
                 <div class="card-text card-body">
                   <p><span style="font-weight: bold;">Choropleth:</span> Permite ver o total de vacinações diárias dos países, sendo possível também, selecionar no mapa as informações. </p>
                 </div>
               </div>
+            </section>
+
+            <section id="Scattergeo">
               <div class="text-center" style="margin-top: 50px"><h4>World Scattergeo</h4></div>
               <div style="margin-left: 50px" id="observablehq-map2-bb1592c0"></div>
-              
+
               <div class="text-center">
                 <button class="btn btn-dark" data-toggle="collapse" href="#mapamundi2" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-              </button>
+                </button>
               </div>
-              
-              
+
+
               <div class="collapse" id="mapamundi2">
                 <div class="card-text card-body">
                   <p><span style="font-weight: bold;">Scattergeo:</span> Nesse tipo de visualização, as informações são representadas por círculos, apresentando o total de vacinações por meses de cada País.</p>
                 </div>
               </div>
+            </section>
+            
+            <section id="Line_chart">
               <div class="text-center" style="margin-top: 50px"><h4>World Linechart</h4></div>
               <div style="margin-left: 50px" id="observablehq-viewof-linechart-bb1592c0"></div>
-              
+
               <div class="text-center">
                 <button class="btn btn-dark" data-toggle="collapse" href="#linechart" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-              </button>
-            </div>
-              
-              
+                </button>
+              </div>
               <div class="collapse" id="linechart">
                 <div class="card-text card-body">
                   <p><span style="font-weight: bold;">Line chart:</span> Evolução do total de vacinações nos países em cada mês</p>
                 </div>
               </div>
-
+            </section>
+            
+            <section id="Heatmap">
               <div class="text-center" style="margin-top: 50px"><h4>World Heatmap</h4></div>
               <div style="margin-left: 50px" id="observablehq-viewof-heatmap-bb1592c0"></div>
               <div class="text-center">
                 <button class="btn btn-dark" data-toggle="collapse" href="#heatmap" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-              </button>
+                </button>
               </div>
-              
-              
+
+
               <div class="collapse" id="heatmap">
                 <div class="card-text card-body">
                   <p><span style="font-weight: bold;">Heatmap:</span> Possibilita a visualização do total de vacinações em dias específicos de cada mês. </p>
                 </div>
               </div>
-              <div class="d-none" id="observablehq-dates-bb1592c0"></div>
-              <div class="d-none" id="observablehq-date-bb1592c0"></div>
-              <div class="d-none" id="observablehq-filtered_covid_data-bb1592c0"></div>
-              <div class="d-none" id="observablehq-sortedData-bb1592c0"></div>
+            </section>
+            
+            <div class="d-none" id="observablehq-dates-bb1592c0"></div>
+            <div class="d-none" id="observablehq-date-bb1592c0"></div>
+            <div class="d-none" id="observablehq-filtered_covid_data-bb1592c0"></div>
+            <div class="d-none" id="observablehq-sortedData-bb1592c0"></div>
 
+            <section id="Bubble_chart">
               <div class="text-center" style="margin-top: 50px"><h4>World BubbleChart</h4></div>
               <div id="observablehq-bubbleChart-bb1592c0"></div>
               <div class="text-center">
                 <button class="btn btn-dark" data-toggle="collapse" href="#bubbleChart" role="button" aria-expanded="false" aria-controls="collapseExample">Mais sobre este gráfico
-              </button>
+                </button>
               </div>
-              
-              
+
+
               <div class="collapse" id="bubbleChart">
                 <div class="card-text card-body">
                   <p><span style="font-weight: bold;">Bubble chart:</span> O gráfico permite ver número de doses de vacinas utilizadas nos países e a porcentagem das vacinações. Apresentando também, a quantidade em milhões aplicadas  e o percentual em todo o mundo.</p>
                 </div>
               </div>
-              <div class="d-none" id="observablehq-renderBubbleChartContainer-bb1592c0"></div>
-              <div class="d-none" id="observablehq-order-bb1592c0"></div>
-              <div class="d-none" id="observablehq-format-bb1592c0"></div>
-              <div class="d-none" id="observablehq-textComponent-bb1592c0"></div>
-              <div class="d-none" id="observablehq-labelComponent-bb1592c0"></div>
-              <div class="d-none" id="observablehq-circleComponent-bb1592c0"></div>
-              <div class="d-none" id="observablehq-bubbleComponent-bb1592c0"></div>
-              <div class="d-none" id="observablehq-renderBubbleChart-bb1592c0"></div>
-              <div class="d-none" id="observablehq-trend-bb1592c0"></div>
-              <div class="d-none" id="observablehq-data-bb1592c0"></div>
-              <div class="d-none" id="observablehq-dataset-bb1592c0"></div>
-              <div class="d-none" id="observablehq-mapLayout-bb1592c0"></div>
-              <div class="d-none" id="observablehq-Plotly-bb1592c0"></div>
-              <div class="d-none" id="observablehq-height-bb1592c0"></div>
-              <div class="d-none" id="observablehq-pack-bb1592c0"></div>
-              <div class="d-none" id="observablehq-d3Render-bb1592c0"></div>
-              <div class="d-none" id="observablehq-render-bb1592c0"></div>
-              <div class="d-none" id="observablehq-dc-bb1592c0"></div>
-              <div class="d-none" id="observablehq-d3-bb1592c0"></div>
+            </section>
+            
+            <div class="d-none" id="observablehq-renderBubbleChartContainer-bb1592c0"></div>
+            <div class="d-none" id="observablehq-order-bb1592c0"></div>
+            <div class="d-none" id="observablehq-format-bb1592c0"></div>
+            <div class="d-none" id="observablehq-textComponent-bb1592c0"></div>
+            <div class="d-none" id="observablehq-labelComponent-bb1592c0"></div>
+            <div class="d-none" id="observablehq-circleComponent-bb1592c0"></div>
+            <div class="d-none" id="observablehq-bubbleComponent-bb1592c0"></div>
+            <div class="d-none" id="observablehq-renderBubbleChart-bb1592c0"></div>
+            <div class="d-none" id="observablehq-trend-bb1592c0"></div>
+            <div class="d-none" id="observablehq-data-bb1592c0"></div>
+            <div class="d-none" id="observablehq-dataset-bb1592c0"></div>
+            <div class="d-none" id="observablehq-mapLayout-bb1592c0"></div>
+            <div class="d-none" id="observablehq-Plotly-bb1592c0"></div>
+            <div class="d-none" id="observablehq-height-bb1592c0"></div>
+            <div class="d-none" id="observablehq-pack-bb1592c0"></div>
+            <div class="d-none" id="observablehq-d3Render-bb1592c0"></div>
+            <div class="d-none" id="observablehq-render-bb1592c0"></div>
+            <div class="d-none" id="observablehq-dc-bb1592c0"></div>
+            <div class="d-none" id="observablehq-d3-bb1592c0"></div>
 
-              <div style="margin-top: 50px">
-                <p>Credit: <a href="https://observablehq.com/@washingtondacosta/vaccination-against-covid-19-around-the-world">Vaccination against covid 19 around the world by washingtondacosta</a></p>
-              </div>
-              
 
-            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <div class="row">
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row text-right" style="background-color: #292b2c; color: white; height: 60px;">
       <div class="col-xs-12 col-md-12">
-        <h5>Por Jussara Teixeira de Araújo Gonçalves e Washington da Costa Silva</h5>
+        <h6 style="margin-top: 20px">Por Jussara Teixeira de Araújo Gonçalves e Washington da Costa Silva</h6>
       </div>
     </div>
   </div>
+  
 
   <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";

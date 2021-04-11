@@ -7,24 +7,31 @@ body{
     padding-top: 50px;
 }
 
-section{
+section#home{
     padding-top: 25px;
     padding-bottom: 15px;
     min-height: 100vh;
 }
 
-section#home{
+section#Choropleth{
     padding-top: 25px;
+    padding-bottom: 15px;
     min-height: 100vh;
 }
 
-section#mundo{
+section#Scattergeo{
     padding-top: 25px;
-    min-height: 100vh;
+    min-height: 60vh;
 }
-
-section#rankings{
+section#Line_chart{
     padding-top: 25px;
-    min-height: 100vh;
+    min-height: 60vh;
 }
-
+section#Heatmap{
+    padding-top: 25px;
+    min-height: 60vh;
+}
+section#Bubble_chart{
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
