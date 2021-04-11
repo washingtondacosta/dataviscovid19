@@ -1,0 +1,14 @@
+{
+  "name": "@washingtondacosta/vaccination-against-covid-19-around-the-world",
+  "main": "76f7614fd2925ae4@640.js",
+  "version": "640.0.0",
+  "homepage": "https://observablehq.com/@washingtondacosta/vaccination-against-covid-19-around-the-world",
+  "author": {
+    "name": "washingtondacosta",
+    "url": "https://observablehq.com/@washingtondacosta"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
